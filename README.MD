@@ -30,7 +30,7 @@ For both ECG and PPG signals, we meticulously extracted a range of statistical a
 
 Our modeling approach hinged on the utilization of a Random Forest Classifier comprising 1000 trees. We employed Stratified K-Fold cross-validation for subject-independent modeling and a train-test split for subject-dependent modeling.
 
-### Subject-Dependent Modelling
+###[### Subject-Dependent Modelling](https://github.com/roupenminassian/CRC-P/tree/main/Model%20Training)
 
 For subject-dependent modeling, we partitioned each subject's data into a training set and a test set, preserving the original proportions of each activity type. Subsequently, we trained a Random Forest model for each subject and assessed its performance using metrics such as accuracy, precision, recall, and F1-score.
 
