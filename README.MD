@@ -22,7 +22,7 @@ We systematically sampled the primary data at various frequencies, including 300
 
 In addition to frequency sampling, we recognized the significance of evaluating the influence of data duration on our results. Consequently, we systematically adjusted the data period to 50%, 25%, and 10% of the original data duration, observing any consequential variations. Each adjustment offered valuable insights into the robustness of our findings, revealing whether shorter data spans significantly affected our conclusions.
 
-## [Feature Extraction](https://github.com/roupenminassian/CRC-P/tree/main/Feature%20Engineering)
+## Feature Extraction
 
 For both ECG and PPG signals, we meticulously extracted a range of statistical and spectral features, encompassing measures such as mean, median, variance, standard deviation, skewness, kurtosis, number of peaks, number of valleys, spectral entropy, dominant frequency, and heart rate variability indices (e.g., mean NNI, SDNN). These features were extracted both globally, summarizing the entire signal, and locally, within overlapping windows.
 
@@ -30,11 +30,11 @@ For both ECG and PPG signals, we meticulously extracted a range of statistical a
 
 Our modeling approach hinged on the utilization of a Random Forest Classifier comprising 1000 trees. We employed Stratified K-Fold cross-validation for subject-independent modeling and a train-test split for subject-dependent modeling.
 
-### [Subject-Dependent Modelling](https://github.com/roupenminassian/CRC-P/tree/main/Model%20Training)
+### Subject-Dependent Modelling
 
 For subject-dependent modeling, we partitioned each subject's data into a training set and a test set, preserving the original proportions of each activity type. Subsequently, we trained a Random Forest model for each subject and assessed its performance using metrics such as accuracy, precision, recall, and F1-score.
 
-### [Subject-Independent Modelling](https://github.com/roupenminassian/CRC-P/tree/main/Model%20Training)
+### Subject-Independent Modelling
 
 Subject-independent modeling involved the use of Stratified K-Fold cross-validation to maintain the original proportions of each activity type across folds. The Random Forest model was trained on 4 folds and tested on the remaining one, repeating this process for each fold while averaging performance metrics.
 
