@@ -180,3 +180,21 @@ Absolutely! I'll create the table contents for each of the data period datasets 
 | 50%             | 0.79      | 0.86   | 0.82 | 0.86     |
 | 25%             | 0.74      | 0.83   | 0.77 | 0.83     |
 | 10%             | 0.82      | 0.88   | 0.84 | 0.88     |
+
+## Conclusions
+
+### Frequency Resampling:
+
+1. **Effect on Accuracy**: For many modeling approaches, there seems to be a slight increase in accuracy when the data frequency is reduced from the baseline of 500Hz. This suggests that higher granularity might introduce noise or variability that can sometimes hinder the performance of the models.
+
+2. **Binary vs Multiclass**: In the subject-independent modeling results, binary classification consistently outperforms multiclass classification across all frequency levels, indicating a clearer distinction between two classes compared to multiple ones.
+
+3. **Local vs Global Features**: In many cases, models using global features perform similarly to those using local features. However, with frequency resampling, some models, especially subject-dependent ones, show significant variations between local and global feature performance.
+
+### Data Period Adjustments:
+
+1. **Shortening Data Duration**: Interestingly, reducing the data duration doesn't always lead to a decrease in model performance. In some modeling scenarios, a reduction to 50% or even 25% of the original data duration yields comparable or even improved results in terms of precision, recall, and accuracy. This indicates that the most informative patterns in the data may be captured effectively even with shorter data spans.
+
+2. **Binary vs Multiclass**: Similar to frequency resampling, binary classification tends to outperform multiclass classification across different data periods. This reaffirms the inherent difficulty in distinguishing between multiple classes as opposed to two.
+
+3. **Subject Dependency**: Subject-dependent models, particularly for binary classification using global features, exhibit more noticeable fluctuations in performance with changes in data duration. This suggests that the amount of data can play a critical role when tailoring models to individual subjects.
